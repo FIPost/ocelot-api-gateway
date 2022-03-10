@@ -3,6 +3,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Ocelot.DependencyInjection;
+using Ocelot.Middleware;
+using System.IO;
 
 namespace ocelot_api_gateway
 {
@@ -10,22 +12,28 @@ namespace ocelot_api_gateway
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
-        }
-
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
+            new WebHostBuilder()
+                .UseKestrel()
+                .UseContentRoot(Directory.GetCurrentDirectory())
                 .ConfigureAppConfiguration((host, config) =>
                 {
-                    config.AddJsonFile($"ocelot.{host.HostingEnvironment.EnvironmentName}.json", false, true);
+                    config
+                        .SetBasePath(host.HostingEnvironment.ContentRootPath)
+                        .AddJsonFile($"appsettings.{host.HostingEnvironment.EnvironmentName}.json", true, true)
+                        .AddJsonFile($"ocelot.{host.HostingEnvironment.EnvironmentName}.json", false, true)
+                        .AddEnvironmentVariables();
                 })
                 .ConfigureServices(s =>
                 {
                     s.AddOcelot();
                 })
-                .ConfigureWebHostDefaults(webBuilder =>
+                .UseIISIntegration()
+                .Configure(app =>
                 {
-                    webBuilder.UseStartup<Startup>();
-                });
+                    app.UseOcelot().Wait();
+                })
+                .Build()
+                .Run();
+        }
     }
 }
