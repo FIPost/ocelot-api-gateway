@@ -9,9 +9,9 @@ ENV ASPNETCORE_ENVIRONMENT="Development"
 ENV ENVIRONMENT="Development"
 
 WORKDIR /src
-COPY ["ocelot-api-gateway/ocelot-api-gateway.csproj", "ocelot-api-gateway/"]
+COPY ["./ocelot-api-gateway.csproj", "ocelot-api-gateway/"]
 RUN dotnet restore "ocelot-api-gateway/ocelot-api-gateway.csproj"
-COPY . .
+COPY [".", "./ocelot-api-gateway"]
 WORKDIR "/src/ocelot-api-gateway"
 RUN dotnet build "ocelot-api-gateway.csproj" -c Release -o /app/build
 

@@ -5,19 +5,19 @@
       "DownStreamScheme": "http",
       "DownStreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "pakket-service",
           "Port": 5001
         }
       ],
       "UpStreamPathTemplate": "/api/packages",
-      "UpStreamHttpMethod": [ "Get", "Post" ]
+      "UpStreamHttpMethod": [ "Get", "Post", "Options" ]
     },
     {
       "DownStreamPathTemplate": "/packages/{id}",
       "DownStreamScheme": "https",
       "DownStreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "pakket-service",
           "Port": 5001
         }
       ],
@@ -29,7 +29,7 @@
       "DownStreamScheme": "https",
       "DownStreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "pakket-service",
           "Port": 5001
         }
       ],
@@ -43,7 +43,7 @@
       "DownStreamScheme": "https",
       "DownStreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "location-service",
           "Port": 5002
         }
       ],
@@ -55,7 +55,7 @@
       "DownStreamScheme": "https",
       "DownStreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "location-service",
           "Port": 5002
         }
       ],
@@ -67,7 +67,7 @@
       "DownStreamScheme": "https",
       "DownStreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "location-service",
           "Port": 5002
         }
       ],
@@ -81,7 +81,7 @@
       "DownStreamScheme": "https",
       "DownStreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "location-service",
           "Port": 5002
         }
       ],
@@ -93,7 +93,7 @@
       "DownStreamScheme": "https",
       "DownStreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "location-service",
           "Port": 5002
         }
       ],
@@ -105,7 +105,7 @@
       "DownStreamScheme": "https",
       "DownStreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "location-service",
           "Port": 5002
         }
       ],
@@ -119,7 +119,7 @@
       "DownStreamScheme": "https",
       "DownStreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "location-service",
           "Port": 5002
         }
       ],
@@ -131,7 +131,7 @@
       "DownStreamScheme": "https",
       "DownStreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "location-service",
           "Port": 5002
         }
       ],
@@ -143,7 +143,7 @@
       "DownStreamScheme": "https",
       "DownStreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "location-service",
           "Port": 5002
         }
       ],
@@ -157,7 +157,7 @@
       "DownStreamScheme": "https",
       "DownStreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "personeel-service",
           "Port": 5003
         }
       ],
@@ -169,7 +169,7 @@
       "DownStreamScheme": "https",
       "DownStreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "personeel-service",
           "Port": 5003
         }
       ],

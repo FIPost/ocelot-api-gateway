@@ -21,7 +21,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "https://localhost:8123;http://localhost:80"
+      "applicationUrl": "https://localhost:8123;"
     },
     "Docker": {
       "commandName": "Docker",
@@ -29,7 +29,7 @@
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
       "publishAllPorts": true,
       "useSSL": true,
-      "DockerfileRunArguments": "-v $env:APPDATA\\microsoft\\UserSecrets:/root/.microsoft/usersecrets -v $env:USERPROFILE\\.aspnet\\https:/root/.aspnet/https/"
+      "DockerfileRunArguments": "-v $env:APPDATA\\microsoft\\UserSecrets:/root/.microsoft/usersecrets -v $env:USERPROFILE\\.aspnet\\https:/root/.aspnet/https/ --network ipost-network"
     }
   }
 }
