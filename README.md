@@ -58,13 +58,15 @@ Routes are what ocelot uses to set up endpoints and to connect those endpoints t
 
 | Name | Description |
 |---|---|
-| DownStreamPathTemplate | |
-| DownStreamPathScheme | |
-| DownStreamHostAndPorts | |
-| UpStreamPathTemplate | |
-| UpStreamHttpMethod | |
+| DownStreamPathTemplate | The URL on the service where the gateway will redirect the request |
+| DownStreamPathScheme | Either http or https depending on what the service is using |
+| DownStreamHostAndPorts | The host name and port of the service. The host name could be the IP or localhost. If using in docker the host name needs to be the name of the container |
+| UpStreamPathTemplate | The URL on the gateway the frontend will call |
+| UpStreamHttpMethod | The methods that will be redirected by the gateway (GET, POST, PUT, DELETE, etc.). Leave empty to allow all |
 
-[Docummentation](https://ocelot.readthedocs.io/en/latest/features/routing.html)
+To add a route add an extra entry to the ocelot.json file in the same structure as the snippet above.
+
+[Ocelot Routing](https://ocelot.readthedocs.io/en/latest/features/routing.html)
 
 ## FAQ
 
