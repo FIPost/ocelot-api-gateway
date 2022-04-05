@@ -5,7 +5,7 @@
       "DownStreamScheme": "http",
       "DownStreamHostAndPorts": [
         {
-          "Host": "pakket-service",
+          "Host": "package-service",
           "Port": 5001
         }
       ],
@@ -17,7 +17,7 @@
       "DownStreamScheme": "https",
       "DownStreamHostAndPorts": [
         {
-          "Host": "pakket-service",
+          "Host": "package-service",
           "Port": 5001
         }
       ],
