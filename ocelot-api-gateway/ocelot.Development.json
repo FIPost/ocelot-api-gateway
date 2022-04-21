@@ -13,8 +13,8 @@
       "UpStreamHttpMethod": [ "Get", "Post", "Options" ]
     },
     {
-      "DownStreamPathTemplate": "/packages/{id}",
-      "DownStreamScheme": "https",
+      "DownStreamPathTemplate": "/api/packages/{id}",
+      "DownStreamScheme": "http",
       "DownStreamHostAndPorts": [
         {
           "Host": "package-service",
@@ -25,11 +25,11 @@
       "UpStreamHttpMethod": [ "Get", "Put", "Delete" ]
     },
     {
-      "DownStreamPathTemplate": "/packages/tickets",
-      "DownStreamScheme": "https",
+      "DownStreamPathTemplate": "/api/packages/tickets",
+      "DownStreamScheme": "http",
       "DownStreamHostAndPorts": [
         {
-          "Host": "pakket-service",
+          "Host": "package-service",
           "Port": 5001
         }
       ],
@@ -39,8 +39,8 @@
 
 
     {
-      "DownStreamPathTemplate": "/locations/rooms",
-      "DownStreamScheme": "https",
+      "DownStreamPathTemplate": "/api/rooms",
+      "DownStreamScheme": "http",
       "DownStreamHostAndPorts": [
         {
           "Host": "location-service",
@@ -51,8 +51,8 @@
       "UpStreamHttpMethod": []
     },
     {
-      "DownStreamPathTemplate": "/locations/rooms/{id}",
-      "DownStreamScheme": "https",
+      "DownStreamPathTemplate": "/api/rooms/{id}",
+      "DownStreamScheme": "http",
       "DownStreamHostAndPorts": [
         {
           "Host": "location-service",
@@ -63,8 +63,8 @@
       "UpStreamHttpMethod": [ "Get" ]
     },
     {
-      "DownStreamPathTemplate": "/locations/rooms/name/{name}",
-      "DownStreamScheme": "https",
+      "DownStreamPathTemplate": "/api/rooms/name/{name}",
+      "DownStreamScheme": "http",
       "DownStreamHostAndPorts": [
         {
           "Host": "location-service",
@@ -77,8 +77,8 @@
 
 
     {
-      "DownStreamPathTemplate": "/locations/cities",
-      "DownStreamScheme": "https",
+      "DownStreamPathTemplate": "/api/cities",
+      "DownStreamScheme": "http",
       "DownStreamHostAndPorts": [
         {
           "Host": "location-service",
@@ -89,8 +89,8 @@
       "UpStreamHttpMethod": []
     },
     {
-      "DownStreamPathTemplate": "/locations/cities/{id}",
-      "DownStreamScheme": "https",
+      "DownStreamPathTemplate": "/api/cities/{id}",
+      "DownStreamScheme": "http",
       "DownStreamHostAndPorts": [
         {
           "Host": "location-service",
@@ -101,8 +101,8 @@
       "UpStreamHttpMethod": [ "Get" ]
     },
     {
-      "DownStreamPathTemplate": "/locations/cities/name/{name}",
-      "DownStreamScheme": "https",
+      "DownStreamPathTemplate": "/api/cities/name/{name}",
+      "DownStreamScheme": "http",
       "DownStreamHostAndPorts": [
         {
           "Host": "location-service",
@@ -115,8 +115,8 @@
 
 
     {
-      "DownStreamPathTemplate": "/locations/buildings",
-      "DownStreamScheme": "https",
+      "DownStreamPathTemplate": "/api/buildings",
+      "DownStreamScheme": "http",
       "DownStreamHostAndPorts": [
         {
           "Host": "location-service",
@@ -127,8 +127,8 @@
       "UpStreamHttpMethod": []
     },
     {
-      "DownStreamPathTemplate": "/locations/buildings/{id}",
-      "DownStreamScheme": "https",
+      "DownStreamPathTemplate": "/api/buildings/{id}",
+      "DownStreamScheme": "http",
       "DownStreamHostAndPorts": [
         {
           "Host": "location-service",
@@ -139,8 +139,8 @@
       "UpStreamHttpMethod": [ "Get" ]
     },
     {
-      "DownStreamPathTemplate": "/locations/buildings/name/{name}",
-      "DownStreamScheme": "https",
+      "DownStreamPathTemplate": "/api/buildings/name/{name}",
+      "DownStreamScheme": "http",
       "DownStreamHostAndPorts": [
         {
           "Host": "location-service",
@@ -153,8 +153,8 @@
 
 
     {
-      "DownStreamPathTemplate": "/persons",
-      "DownStreamScheme": "https",
+      "DownStreamPathTemplate": "/api/persons",
+      "DownStreamScheme": "http",
       "DownStreamHostAndPorts": [
         {
           "Host": "personeel-service",
@@ -165,8 +165,8 @@
       "UpStreamHttpMethod": [ "Get" ]
     },
     {
-      "DownStreamPathTemplate": "/persons/{id}",
-      "DownStreamScheme": "https",
+      "DownStreamPathTemplate": "/api/persons/{id}",
+      "DownStreamScheme": "http",
       "DownStreamHostAndPorts": [
         {
           "Host": "personeel-service",
