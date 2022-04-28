@@ -25,7 +25,7 @@
       "UpStreamHttpMethod": [ "Get", "Put", "Delete" ]
     },
     {
-      "DownStreamPathTemplate": "/api/packages/tickets",
+      "DownStreamPathTemplate": "/api/tickets",
       "DownStreamScheme": "http",
       "DownStreamHostAndPorts": [
         {
@@ -34,7 +34,7 @@
         }
       ],
       "UpStreamPathTemplate": "/api/packages/tickets",
-      "UpStreamHttpMethod": [ "Post" ]
+      "UpStreamHttpMethod": [ "Post", "Options" ]
     },
 
 
