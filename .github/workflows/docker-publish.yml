@@ -16,7 +16,7 @@ jobs:
   
       - uses: microsoft/variable-substitution@v1 
         with:
-            files: 'appsettings.json'
+            files: 'ocelot-api-gateway/appsettings.json'
         env:
             ConnectionString: ${{ secrets.DATABASE_CONNECTION }}
           
