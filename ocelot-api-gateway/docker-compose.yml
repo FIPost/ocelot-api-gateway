@@ -1,0 +1,17 @@
+services:
+    pkg:
+        build:
+          context: .
+          dockerfile: Dockerfile.local
+        container_name: ocelot-api-gateway
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+            - ASPNETCORE_URLS=http://+:8123
+        ports:
+            - "8123:8123"
+        networks:
+            - ipost-network
+
+networks:
+    ipost-network:
+        external: true

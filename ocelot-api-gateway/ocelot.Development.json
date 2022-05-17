@@ -1,0 +1,186 @@
+﻿{
+  "Routes": [
+    {
+      "DownStreamPathTemplate": "/api/packages",
+      "DownStreamScheme": "http",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "package-service",
+          "Port": 5001
+        }
+      ],
+      "UpStreamPathTemplate": "/api/packages",
+      "UpStreamHttpMethod": [ "Get", "Post", "Options" ]
+    },
+    {
+      "DownStreamPathTemplate": "/api/packages/{id}",
+      "DownStreamScheme": "http",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "package-service",
+          "Port": 5001
+        }
+      ],
+      "UpStreamPathTemplate": "/api/packages/{id}",
+      "UpStreamHttpMethod": [ "Get", "Put", "Delete" ]
+    },
+    {
+      "DownStreamPathTemplate": "/api/tickets",
+      "DownStreamScheme": "http",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "package-service",
+          "Port": 5001
+        }
+      ],
+      "UpStreamPathTemplate": "/api/packages/tickets",
+      "UpStreamHttpMethod": [ "Post", "Options" ]
+    },
+
+
+    {
+      "DownStreamPathTemplate": "/api/rooms",
+      "DownStreamScheme": "http",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "location-service",
+          "Port": 5002
+        }
+      ],
+      "UpStreamPathTemplate": "/api/locations/rooms",
+      "UpStreamHttpMethod": []
+    },
+    {
+      "DownStreamPathTemplate": "/api/rooms/{id}",
+      "DownStreamScheme": "http",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "location-service",
+          "Port": 5002
+        }
+      ],
+      "UpStreamPathTemplate": "/api/locations/rooms/{id}",
+      "UpStreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownStreamPathTemplate": "/api/rooms/name/{name}",
+      "DownStreamScheme": "http",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "location-service",
+          "Port": 5002
+        }
+      ],
+      "UpStreamPathTemplate": "/api/locations/rooms/name/{names}",
+      "UpStreamHttpMethod": [ "Get" ]
+    },
+
+
+    {
+      "DownStreamPathTemplate": "/api/cities",
+      "DownStreamScheme": "http",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "location-service",
+          "Port": 5002
+        }
+      ],
+      "UpStreamPathTemplate": "/api/locations/cities",
+      "UpStreamHttpMethod": []
+    },
+    {
+      "DownStreamPathTemplate": "/api/cities/{id}",
+      "DownStreamScheme": "http",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "location-service",
+          "Port": 5002
+        }
+      ],
+      "UpStreamPathTemplate": "/api/locations/cities/{id}",
+      "UpStreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownStreamPathTemplate": "/api/cities/name/{name}",
+      "DownStreamScheme": "http",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "location-service",
+          "Port": 5002
+        }
+      ],
+      "UpStreamPathTemplate": "/api/locations/cities/name/{names}",
+      "UpStreamHttpMethod": [ "Get" ]
+    },
+
+
+    {
+      "DownStreamPathTemplate": "/api/buildings",
+      "DownStreamScheme": "http",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "location-service",
+          "Port": 5002
+        }
+      ],
+      "UpStreamPathTemplate": "/api/locations/buildings",
+      "UpStreamHttpMethod": []
+    },
+    {
+      "DownStreamPathTemplate": "/api/buildings/{id}",
+      "DownStreamScheme": "http",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "location-service",
+          "Port": 5002
+        }
+      ],
+      "UpStreamPathTemplate": "/api/locations/buildings/{id}",
+      "UpStreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownStreamPathTemplate": "/api/buildings/name/{name}",
+      "DownStreamScheme": "http",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "location-service",
+          "Port": 5002
+        }
+      ],
+      "UpStreamPathTemplate": "/api/locations/buildings/name/{names}",
+      "UpStreamHttpMethod": [ "Get" ]
+    },
+
+
+    {
+      "DownStreamPathTemplate": "/api/persons",
+      "DownStreamScheme": "http",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "personeel-service",
+          "Port": 5003
+        }
+      ],
+      "UpStreamPathTemplate": "/api/persons",
+      "UpStreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownStreamPathTemplate": "/api/persons/{id}",
+      "DownStreamScheme": "http",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "personeel-service",
+          "Port": 5003
+        }
+      ],
+      "UpStreamPathTemplate": "/api/persons/{id}",
+      "UpStreamHttpMethod": [ "Get" ]
+    }
+  ],
+
+
+
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:8123"
+  }
+}
